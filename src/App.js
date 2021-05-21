@@ -9,17 +9,19 @@ function App(){
     ])
 
     return(
-        <div className = "app">
+        <>
+            <div className = "app">
+                
+                {
+                    users.map(user =>(
+                        <Tweet name={user.name} message={user.message}/>
+                    ))
+                }
+                
             
-            {
-                users.map(user =>(
-                    <Tweet name={user.name} message={user.message}/>
-                ))
-            }
-            
-           
-        </div>
-        
+            </div>
+            <h1>Hello</h1>
+        </>
 
     )
 }
